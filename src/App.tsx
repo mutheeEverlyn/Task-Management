@@ -3,11 +3,16 @@ import Home from './pages/Home';
 import About from './components/About';
 import Error from './pages/Error';
 import Profile from './pages/Profile';
+import Admin from './components/Admin';
 import Register from './features/register/Register';
 import AdminDashboard from './dashboard/AdminDashboard';
 import UserDashboard from './dashboard/UserDashboard';
 import Login from './features/login/Login';
 import Contact from './components/Contact';
+import Tasks from './components/Tasks';
+import RouteProtection from './components/RouteProtection';
+import UsersTable from './features/users_management/UsersTable';
+import Dashboard from './components/Dashboard';
 const App:React.FC=()=> {
   const router = createBrowserRouter([
     {
