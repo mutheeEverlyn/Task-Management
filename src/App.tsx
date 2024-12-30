@@ -72,7 +72,6 @@ const App:React.FC=()=> {
    
       ],
     },
-    ,
     {
       path: 'contact',
       element: <Contact />,
