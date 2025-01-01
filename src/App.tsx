@@ -9,11 +9,13 @@ import Register from './features/register/Register';
 import AdminDashboard from './dashboard/AdminDashboard';
 import UserDashboard from './dashboard/UserDashboard';
 import Login from './features/login/Login';
-import Contact from './components/Contact';
+import ContactUs from './components/ContactUs';
 import Tasks from './components/Tasks';
 import RouteProtection from './components/RouteProtection';
 import UsersTable from './features/users_management/UsersTable';
 import Dashboard from './components/Dashboard';
+import Services from './components/Services';
+import ContactSuccess from './components/ContactSuccess';
 const App:React.FC=()=> {
   const router = createBrowserRouter([
     {
@@ -73,13 +75,18 @@ const App:React.FC=()=> {
       ],
     },
     {
-      path: 'contact',
-      element: <Contact />,
+      path: 'contact-us',
+      element: <ContactUs />,
       errorElement: <Error />,
     },
     {
-      path: 'login',
-      element: <Login />,
+      path: 'contactSuccess',
+      element: <ContactSuccess />,
+      errorElement: <Error />,
+    },
+    {
+      path: 'services',
+      element: <Services />,
       errorElement: <Error />,
     },
   ]);
