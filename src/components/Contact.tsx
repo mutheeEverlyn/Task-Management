@@ -7,10 +7,10 @@ const Contact = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 bg-blue-400 py-8 px-6">
             <div className="col-span-2 space-y-3">
               <h1 className="text-4xl sm:text-5xl font-bold text-white">
-                Let's collaborate on your upcoming vehicle rental venture to have an amaizing momment
+               Feel free to consult us where you may feel needs correction or improvements on MyTask app .
               </h1>
               <p className="text-gray-800">
-                If you have any questions or suggestions fell free to contact us
+                we value your feedback
               </p>
             </div>
             <div className="sm:grid sm:place-items-center">
