@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* .footer {
+    background-color: var(--very-dark-black-blue);
+    color: var(--grayish-blue);
+    border-top-right-radius: 100px;
+  } */
