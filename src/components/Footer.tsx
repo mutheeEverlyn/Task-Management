@@ -1,4 +1,4 @@
-
+import  {Link}  from 'react-router-dom'
 const Footer = () => {
   return (
     <>
@@ -6,9 +6,9 @@ const Footer = () => {
       <div className="block mx-auto pt-10 md:mx-0" >MyTasks</div>
       <div className="md:grid md:grid-cols-2 lg:grid-cols-3">
       <ul>
-        <li>About us</li>
-        <li>Contact</li>
-        <li>Services</li>
+        <li><button><Link to='/about'>About us</Link></button></li>
+        <li><button><Link to='/contact-us'>Contact</Link></button></li>
+        <li><button><Link to='/services'>Services</Link></button></li>
         <li><button>Login</button></li>
         <li><button>sign up</button></li>
         </ul>
