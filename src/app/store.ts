@@ -4,6 +4,7 @@ import storage from 'redux-persist/lib/storage';
 import { loginApi } from '../features/login/LoginApi';
 import { registerApi } from '../features/register/RegisterApi';
 import { usersAPI } from '../features/users_management/UsersApi';
+import { taskAPI } from '../features/Tasks/TasksApi';
 //auth persist config
 const persistConfig = {
   key: 'auth',
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
   [loginApi.reducerPath]: loginApi.reducer,
   [registerApi.reducerPath]:registerApi.reducer,
   [usersAPI.reducerPath]: usersAPI.reducer,
+  [taskAPI.reducerPath]: taskAPI.reducer,
 });
 
 //apply pesist Reducer to only counter reducer
@@ -28,7 +30,7 @@ export const store = configureStore({
         ignoredActions:['persist/PERSIST','persist/REHYDRATE'],
       },
     }).concat(loginApi.middleware).concat(registerApi.middleware)
-    .concat(usersAPI.middleware)
+    .concat(usersAPI.middleware).concat(taskAPI.middleware)
 });
 
 export const persistedStore = persistStore(store);
