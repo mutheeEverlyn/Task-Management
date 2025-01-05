@@ -10,7 +10,7 @@ import AdminDashboard from './dashboard/AdminDashboard';
 import UserDashboard from './dashboard/UserDashboard';
 import Login from './features/login/Login';
 import ContactUs from './components/ContactUs';
-import Tasks from './components/Tasks';
+import Tasks from './components/MyTasksChart';
 import RouteProtection from './components/RouteProtection';
 import UsersTable from './features/users_management/UsersTable';
 import Dashboard from './components/Dashboard';
