@@ -1,17 +1,20 @@
+import Mary  from '../assets/Mary Khalid.jpg'
+import Evah from '../assets/Evah Otieno.jpg'
+import Paul from '../assets/paul kamau.jpg'
 const testimonialData=[
   {
     name:"Mary khalid",
-    image:"",
+    image:Mary,
     description:"I love the website as it helps me schedule my tasks"
   },
   {
   name:"Paul Kamau",
-  image:"",
+  image:Paul,
   description:"I have used MyTasks for quite some time and i have enjoyed the services"
   },
   {
   name:"Evah Otieno",
-  image:"",
+  image:Evah,
   description:"I cannot regret using MyTasks which helps me out in organizing my work"
   }
 ]
