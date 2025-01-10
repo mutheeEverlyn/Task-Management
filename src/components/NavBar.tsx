@@ -1,5 +1,6 @@
 import hamburger from '../assets/icon-hamburger.svg'
 import { useState } from 'react'
+import MyTasks from '../assets/MyTasks.svg'
 import close from '../assets/icon-close.svg'
 import  {Link}  from 'react-router-dom'
 import MobileMenu from './MobileMenu'
@@ -11,7 +12,7 @@ const NavBar = () => {
   };
   return (
     <div className='flex gap-10 bg-gray-600 text-white   w-full  relative  shadow-md duration-300 md:items-center justify-between h-20  md:gap-0 '>
-      <div className='w-32 lg:w-40 md:w-32 '>MyTasks</div>
+      <div className='w-32 lg:w-40 md:w-32 '><img src={MyTasks} alt="logo" /></div>
       <nav className='hidden  md:flex md:justify-between md:gap-1 '>
       <ul className='flex   gap-5 items-center md:gap-3 '>
         <li><button><Link to='/' className='hover:border-b-2 hover:text-blue-400'>HOME</Link></button></li>
