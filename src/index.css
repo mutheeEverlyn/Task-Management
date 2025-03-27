@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .footer {
-    background-color: var(--very-dark-black-blue);
-    color: var(--grayish-blue);
-    border-top-right-radius: 100px;
-  } */
+.hero{
+  background-image: url("../src/assets/HeroPic.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

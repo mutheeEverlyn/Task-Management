@@ -11,11 +11,14 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.0",
+    "@types/react-beautiful-dnd": "^13.1.8",
     "axios": "^1.7.2",
     "chart.js": "^4.4.3",
     "date-fns": "^3.6.0",
+    "framer-motion": "^12.5.0",
     "lucide-react": "^0.400.0",
     "react": "^18.3.1",
+    "react-beautiful-dnd": "^13.1.1",
     "react-chartjs-2": "^5.2.0",
     "react-datepicker": "^7.3.0",
     "react-dom": "^18.3.1",
@@ -42,5 +45,6 @@
     "tailwindcss": "^3.4.4",
     "typescript": "~5.6.2",
     "vite": "^5.4.10"
-  }
+  },
+  "packageManager": "pnpm@10.6.2+sha512.47870716bea1572b53df34ad8647b42962bc790ce2bf4562ba0f643237d7302a3d6a8ecef9e4bdfc01d23af1969aa90485d4cebb0b9638fa5ef1daef656f6c1b"
 }
