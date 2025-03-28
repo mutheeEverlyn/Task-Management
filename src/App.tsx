@@ -1,22 +1,24 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Login from './features/login/Login';
+import Register from './features/register/Register';
+import UserDashboard from './dashboard/UserDashboard';
+import Dashboard from './components/Dashboard';
+import TaskBoard from './features/Tasks/TaskBoard';
+import AdminTasks from './features/Tasks/AdminTasks';
+import Profile from './pages/Profile';
 import Home from './pages/Home';
 import About from './components/About';
 import Error from './pages/Error';
-import Profile from './pages/Profile';
 import Admin from './components/Admin';
-import Register from './features/register/Register';
-import AdminDashboard from './dashboard/AdminDashboard';
-import UserDashboard from './dashboard/UserDashboard';
-import Login from './features/login/Login';
 import ContactUs from './components/ContactUs';
-import Tasks from './components/MyTasksChart';
-import RouteProtection from './components/RouteProtection';
-import UsersTable from './features/users_management/UsersTable';
-import Dashboard from './components/Dashboard';
-import Services from './components/Services';
 import ContactSuccess from './components/ContactSuccess';
-const App:React.FC=()=> {
+import Services from './components/Services';
+import RouteProtection from './components/RouteProtection';
+import AdminDashboard from './dashboard/AdminDashboard';
+import UsersTable from './features/users_management/UsersTable';
+
+const App: React.FC = () => {
   const router = createBrowserRouter([
     {
       path: '/',
@@ -40,7 +42,7 @@ const App:React.FC=()=> {
     },
     {
       path: 'adminDashboard/*',
-      element: (<RouteProtection element={AdminDashboard} role="admin"/>),
+      element: <RouteProtection element={AdminDashboard} role="admin" />,
       errorElement: <Error />,
       children: [
         {
@@ -48,18 +50,18 @@ const App:React.FC=()=> {
           element: <Admin />,
         },
         {
-          path: 'Tasks',
-          element: <Tasks/>,
+          path: 'tasks',
+          element: <AdminTasks />,
         },
         {
           path: 'users',
-          element: <UsersTable/>,
+          element: <UsersTable />,
         },
       ],
     },
     {
       path: 'userDashboard/*',
-      element: (<RouteProtection element={UserDashboard} role="user"/>),
+      element: <RouteProtection element={UserDashboard} role="user" />,
       errorElement: <Error />,
       children: [
         {
@@ -67,11 +69,13 @@ const App:React.FC=()=> {
           element: <Dashboard />,
         },
         {
+          path: 'tasks',
+          element: <TaskBoard />,
+        },
+        {
           path: 'profile',
           element: <Profile />,
-          errorElement: <Error />,
         },
-   
       ],
     },
     {
@@ -90,11 +94,12 @@ const App:React.FC=()=> {
       errorElement: <Error />,
     },
   ]);
-  return(
-    <div>
-    <RouterProvider router={router} />
-    </div>
-    ) 
-}
 
-export default App
+  return (
+    <div>
+      <RouterProvider router={router} />
+    </div>
+  );
+};
+
+export default App;
