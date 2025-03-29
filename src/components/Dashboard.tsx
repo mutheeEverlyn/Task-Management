@@ -1,13 +1,12 @@
 import React from 'react';
-import { useOutletContext } from 'react-router-dom';
 import MyTasksChart from './MyTasksChart';
+import { Toaster } from 'sonner';
 
 const Dashboard: React.FC = () => {
-  const { user_id } = useOutletContext<{ user_id: number }>();
-
   return (
-    <div className='min-h-screen'>
-      <MyTasksChart user_id={user_id} />
+    <div className='min-h-screen p-4 bg-gray-100'>
+      <Toaster position="top-center" />
+      <MyTasksChart />
     </div>
   );
 };
