@@ -3,16 +3,18 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export interface TTasks{
     task_id:number;
     user_id:number;
+    status:string;
     task:string;
     created_at:string;
     updated_at:string;
+    order?: number;
     msg?: string;
   }
 
 export const taskAPI = createApi({
   reducerPath: 'taskAPI',
   baseQuery: fetchBaseQuery({
-    baseUrl: '',
+    baseUrl: 'http://localhost:8000',
     prepareHeaders: (headers) => {
       const userDetails = JSON.parse(localStorage.getItem('userDetails')||'{}');
       const token=userDetails?.token;
@@ -34,6 +36,9 @@ export const taskAPI = createApi({
       query: () => {
         const userDetails = JSON.parse(localStorage.getItem('userDetails') || '{}');
         const user_id = userDetails?.user_id;
+        if (!user_id) {
+          throw new Error('No user ID found');
+        }
         return `tasks?user_id=${user_id}`;
       },
       providesTags: ['tasks'],

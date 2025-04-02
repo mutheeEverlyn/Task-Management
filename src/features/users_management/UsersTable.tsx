@@ -114,7 +114,7 @@ const UsersTable: React.FC = () => {
           },
         }}
       />
-      <div className="overflow-x-auto bg-gray-800 text-white rounded-lg p-4 min-h-screen">
+      <div className="overflow-x-auto bg-amber-300 text-white rounded-lg p-4 min-h-screen">
         <form onSubmit={editUserId !== null ? handleUpdateUser : handleCreateUser}>
           <div className="mb-2">
             <label htmlFor="full_name" className="block">Full Name:</label>
@@ -124,7 +124,7 @@ const UsersTable: React.FC = () => {
               name="full_name"
               value={formData.full_name}
               onChange={handleChange}
-              className="w-full p-2 rounded bg-gray-700 text-white"
+              className="w-full p-2 rounded bg-gray-300 text-black"
               required
             />
           </div>
@@ -136,7 +136,7 @@ const UsersTable: React.FC = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full p-2 rounded bg-gray-700 text-white"
+              className="w-full p-2 rounded bg-gray-300 text-black"
               required
             />
           </div>
@@ -148,7 +148,7 @@ const UsersTable: React.FC = () => {
               name="contact_phone"
               value={formData.contact_phone}
               onChange={handleChange}
-              className="w-full p-2 rounded bg-gray-700 text-white"
+              className="w-full p-2 rounded bg-gray-300 text-black"
               required
             />
           </div>
@@ -160,7 +160,7 @@ const UsersTable: React.FC = () => {
               name="address"
               value={formData.address}
               onChange={handleChange}
-              className="w-full p-2 rounded bg-gray-700 text-white"
+              className="w-full p-2 rounded bg-gray-300 text-black"
               required
             />
           </div>
@@ -172,7 +172,7 @@ const UsersTable: React.FC = () => {
               name="password"
               value={formData.password}
               onChange={handleChange}
-              className="w-full p-2 rounded bg-gray-700 text-white"
+              className="w-full p-2 rounded bg-gray-300 text-black"
               required
             />
           </div>
@@ -184,7 +184,7 @@ const UsersTable: React.FC = () => {
               name="role"
               value={formData.role}
               onChange={handleChange}
-              className="w-full p-2 rounded bg-gray-700 text-white"
+              className="w-full p-2 rounded bg-gray-300 text-black"
               required
             />
           </div>
@@ -219,7 +219,7 @@ const UsersTable: React.FC = () => {
                         value={formData.full_name}
                         name="full_name"
                         onChange={handleChange}
-                        className="w-full p-2 rounded bg-gray-700 text-white"
+                        className="w-full p-2 rounded bg-gray-300 text-black"
                         required
                       />
                     ) : (
@@ -231,7 +231,7 @@ const UsersTable: React.FC = () => {
                         value={formData.email}
                         name="email"
                         onChange={handleChange}
-                        className="w-full p-2 rounded bg-gray-700 text-white"
+                        className="w-full p-2 rounded bg-gray-300 text-black"
                         required
                       />
                     ) : (
@@ -243,7 +243,7 @@ const UsersTable: React.FC = () => {
                         value={formData.contact_phone}
                         name="contact_phone"
                         onChange={handleChange}
-                        className="w-full p-2 rounded bg-gray-700 text-white"
+                        className="w-full p-2 rounded bg-gray-300 text-black"
                         required
                       />
                     ) : (
@@ -255,7 +255,7 @@ const UsersTable: React.FC = () => {
                         value={formData.address}
                         name="address"
                         onChange={handleChange}
-                        className="w-full p-2 rounded bg-gray-700 text-white"
+                        className="w-full p-2 rounded bg-gray-300 text-black"
                         required
                       />
                     ) : (
@@ -267,7 +267,7 @@ const UsersTable: React.FC = () => {
                         value={formData.role}
                         name="role"
                         onChange={handleChange}
-                        className="w-full p-2 rounded bg-gray-700 text-white"
+                        className="w-full p-2 rounded bg-gray-300 text-black"
                         required
                       />
                     ) : (

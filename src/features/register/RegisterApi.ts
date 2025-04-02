@@ -12,7 +12,7 @@ export interface registerUser {
 // Create the login API
 export const registerApi = createApi({
   reducerPath: 'registerAPI',
-  baseQuery: fetchBaseQuery({ baseUrl: 'https://vehicle-api-5bvc.onrender.com' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:8000' }),
   endpoints: (builder) => ({
     registerUser: builder.mutation<registerUser, Partial<registerUser>>({
       query: (user) => ({
